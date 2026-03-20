@@ -337,4 +337,11 @@ public class MainActivity extends SDLActivity{
         String state = Environment.getExternalStorageState();
         return Environment.MEDIA_MOUNTED.equals(state);
     }
+
+    // Called from native code (libultraship MobileImpl.cpp) via JNI when the
+    // ImGui menu is toggled.  The touch-control overlay that previously used
+    // these has been removed, but the stubs must remain so the JNI lookup
+    // does not crash.
+    void EnableTouchArea() { }
+    void DisableTouchArea() { }
 }
