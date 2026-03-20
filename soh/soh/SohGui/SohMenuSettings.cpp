@@ -100,7 +100,7 @@ void SohMenu::AddMenuSettings() {
                      .Tooltip("Changes the Theme of the Menu Widgets.")
                      .ComboMap(menuThemeOptions)
                      .DefaultIndex(Colors::LightBlue));
-#if not defined(__SWITCH__) and not defined(__WIIU__)
+#if not defined(__SWITCH__) and not defined(__WIIU__) and not defined(__ANDROID__)
     AddWidget(path, "Menu Controller Navigation", WIDGET_CVAR_CHECKBOX)
         .CVar(CVAR_IMGUI_CONTROLLER_NAV)
         .RaceDisable(false)
